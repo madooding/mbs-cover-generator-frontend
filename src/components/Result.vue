@@ -1,7 +1,6 @@
 <template>
     <div class="container">
         <img :src=url alt="Example Cover" class="img-responsive img-thumbnail" id="cover" v-lazy="url">
-        <div v-lazy:background-image="url"></div>
     </div>
 </template>
 
@@ -28,6 +27,7 @@ export default {
 <style scoped>
     div.container {
         width: 100%;
+        height: 315px;
     }
 
     img#cover {
@@ -37,5 +37,6 @@ export default {
     img[lazy=loading]{
         width: 851px;
         height: 315px;
+        background: url('../assets/img/default.gif') no-repeat center center;
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="control-panel">
         <div class="row">
-            <form role="form" class="form-horizontal" @submit.prevent="preventDefault()">
+            <form role="form" class="form-horizontal" @submit.prevent="noSubmit">
                 <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
                     <div class="form-group">
                         <div class="col-sm-12">
