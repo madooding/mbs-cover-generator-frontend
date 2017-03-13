@@ -1,7 +1,7 @@
 <template>
     <div class="control-panel">
         <div class="row">
-            <form role="form" class="form-horizontal">
+            <form role="form" class="form-horizontal" @submit.prevent="preventDefault()">
                 <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
                     <div class="form-group">
                         <div class="col-sm-12">
@@ -9,7 +9,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-6"><button class="btn btn-primary btn-lg col-md-12 col-sm-12 col-col-xs-12" id="download-btn">ดาวน์โหลด</button></div>
+                <div class="col-md-4 col-sm-4 col-xs-6"><button class="btn btn-primary btn-lg col-md-12 col-sm-12 col-col-xs-12" id="download-btn" @click="download">ดาวน์โหลด</button></div>
             </form>
         </div>
     </div>
@@ -31,7 +31,11 @@
             formValue () {
                 this.studentId = this.formValue;
                 this.$emit('input', Number(this.formValue));
-                this.$emit('onValueChanged')
+            }
+        },
+        methods: {
+            download(){
+                location.href = 'downloads/' + Math.floor(this.studentId);
             }
         }
     }

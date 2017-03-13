@@ -6,7 +6,7 @@
         <div class="content">
             <Result :student-id="studentId"/>
             <hr>
-            <control-panel v-model="studentId" @onValueChanged="onValueChanged"/>
+            <control-panel v-model="studentId"/>
             <hr>
             <div class="footer">
                 Developed by <a href="https://fb.com/madooding">@madooding</a>
@@ -27,11 +27,6 @@ export default{
      components:{
         Result,
         ControlPanel
-    },
-    methods: {
-        onValueChanged(){
-            console.log("Value has changed " + this.studentId)
-        }
     }
 }
 </script>
