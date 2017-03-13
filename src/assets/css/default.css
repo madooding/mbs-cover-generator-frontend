@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* This is a default CSS document written by @madooding
+Contact: madooding@yahoo.co.th
+Facebook: fb.com/madooding
+or Twitter : @madooding
+Have fun!
+ */
+@font-face{
+	font-family: 'thaisans-light';
+	src: url(../fonts/thaisansneue-extralight-webfont.ttf);
+}
+@font-face {
+	font-family: 'thaisans-regular';
+	src: url(../fonts/thaisansneue-regular-webfont.ttf);
+}
+@font-face {
+	font-family: 'thaisans-semibold';
+	src: url(../fonts/thaisansneue-semibold-webfont.ttf);
+}
+body{
+	background-color:#EEE;
+}
+div.main{
+	width:100%;
+	margin:0px auto;
+	min-width:320px;
+	max-width:825px;
+	margin-top:40px;
+	height:auto;
+	padding-left:10px;
+	padding-right:10px;
+}
+div.main > .headbar {
+	font-family:'thaisans-regular';
+	font-size:24px;
+	background-color:#393;
+	height:40px;
+	width:100%;
+	text-align:center;
+	vertical-align:middle;
+	line-height:40px;
+	color:#fff;
+	border-radius: 8px 8px 0px 0px;
+}
+div.main > .content{
+	background:#FFF;
+	width:100%;
+	height:auto;
+	padding-top:20px;
+	padding-bottom:20px;
+	border-radius:0px 0px 8px 8px;
+}
+div.main > .content > img{
+	width:100%;
+	max-width:825px;
+}
+div.main > .content > div.control-panel{
+	font-family:'thaisans-regular';
+	font-size:36px;
+	padding-left:20px;
+	padding-right:20px;
+	width:100%;
+	height:auto;
+	margin-top:35px;
+}
+div.main > .content > div.footer{
+	width:100%;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+	vertical-align:40px;
+	font-weight:bold;
+	color:#888;
+	
+}
+div#counter {
+	font-family:'thaisans-regular';
+	font-size:40px;
+	color:#999;
+	text-align:center;
+}
