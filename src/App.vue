@@ -1,22 +1,15 @@
 <template>
   <div id="app">
-    <Main id="main"></Main>
+    <main-container id="main"/>
   </div>
 </template>
 
 <script>
-import Main from './components/Main'
+import MainContainer from './components/Main'
 export default {
-  data: () => ({
-    msg: "Fuck"
-  }),
   components: {
-    Main
-  },
-  mounted () {
-    console.log(this.$el)
+    MainContainer
   }
-  
 }
 </script>
 

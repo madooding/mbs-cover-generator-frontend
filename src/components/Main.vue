@@ -6,6 +6,8 @@
         <div class="content">
             <Result :student-id="studentId"/>
             <hr>
+            <control-panel v-model="studentId" @onValueChanged="onValueChanged"/>
+            <hr>
             <div class="footer">
                 Developed by <a href="https://fb.com/madooding">@madooding</a>
             </div>
@@ -16,12 +18,20 @@
 
 <script>
 import Result from './Result'
+import ControlPanel from './ControlPanel'
+
 export default{
     data: () => ({
-        studentId: 12345
+        studentId: 0
     }),
      components:{
-        Result
+        Result,
+        ControlPanel
+    },
+    methods: {
+        onValueChanged(){
+            console.log("Value has changed " + this.studentId)
+        }
     }
 }
 </script>

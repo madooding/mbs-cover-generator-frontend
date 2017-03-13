@@ -13,8 +13,12 @@ export default {
         }
     },
     computed: {
-        url() {
-            return "https://mbs.madooding.com/img.php?sid=" + this.studentId
+        url() { 
+            let studentId = this.studentId
+            if (this.studentId <= 0 ){
+                studentId = 15551
+            }
+            return "https://mbs.madooding.com/img.php?sid=" + studentId
         }
     }
 }
