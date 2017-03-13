@@ -37,6 +37,7 @@ export default {
     img[lazy=loading]{
         width: 851px;
         height: 315px;
-        background: url('../assets/img/default.gif') no-repeat center center;
+        background: url('../assets/img/default.svg') no-repeat center center;
+        background-size: 80px 80px;
     }
 </style>
