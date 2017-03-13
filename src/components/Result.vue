@@ -5,21 +5,37 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
+    data: () => ({
+        finalStudentId: 0
+    }),
     props: {
         studentId: {
             type: Number,
             default: 15551
         }
     },
+    watch: {
+        studentId (){
+            this.updateFinalStudentId()
+        }
+    },
     computed: {
         url() { 
-            let studentId = this.studentId
-            if (this.studentId <= 0 ){
+            let studentId = this.finalStudentId
+            if (this.finalStudentId <= 0 ){
                 studentId = 15551
             }
             return "https://mbs.madooding.com/img.php?sid=" + studentId
         }
+    },
+    methods: {
+        updateFinalStudentId:
+            _.debounce(function(){
+                this.finalStudentId = this.studentId
+            }, 500)
     }
 }
 </script>
@@ -32,6 +48,7 @@ export default {
 
     img#cover {
         width: 100%;
+        max-height: 315px;
     }
 
     img[lazy=loading]{
