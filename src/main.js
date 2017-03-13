@@ -9,7 +9,9 @@ import '!style-loader!css-loader!../src/assets/css/default.css'
 
 import App from './App'
 
+import VueLazyload from 'vue-lazyload'
 
+Vue.use(VueLazyload)
 
 // Vue.config.productionTip = false
 
