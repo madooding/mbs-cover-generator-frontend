@@ -19,6 +19,9 @@ export default {
     },
     watch: {
         studentId (){
+            let cover = $('#cover')
+            cover.attr('lazy', 'loading')
+            cover.attr('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
             this.updateFinalStudentId()
         }
     },
@@ -52,8 +55,9 @@ export default {
     }
 
     img[lazy=loading]{
-        width: 851px;
-        height: 315px;
+        width: 100%;
+        max-height: 293px;
+        height: 100%;
         background: url('../assets/img/default.svg') no-repeat center center;
         background-size: 80px 80px;
     }
